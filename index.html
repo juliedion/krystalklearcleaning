@@ -18,10 +18,10 @@
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.05) 100%); }
 .hero-pattern { position: absolute; inset: 0; opacity: 0.04; background-image: repeating-linear-gradient(45deg, var(--white) 0, var(--white) 1px, transparent 0, transparent 50%); background-size: 30px 30px; }
 .hero-content { position: relative; z-index: 2; padding: 0 6rem; max-width: 760px; }
-.hero-eyebrow { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--pink); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
-.hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--pink); }
+.hero-eyebrow { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--green); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+.hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--green); }
 .hero-title { font-family: var(--font-serif); font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.1; color: var(--white); margin-bottom: 1.5rem; }
-.hero-title em { font-style: italic; color: var(--pink); display: block; }
+.hero-title em { font-style: italic; color: var(--green); display: block; }
 .hero-body { font-family: var(--font-sans); font-size: 0.95rem; color: rgba(255,255,255,0.65); max-width: 480px; line-height: 1.9; margin-bottom: 2.5rem; }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 .hero-scroll { position: absolute; bottom: 2.5rem; left: 6rem; z-index: 2; display: flex; align-items: center; gap: 0.8rem; font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
@@ -31,7 +31,7 @@
 .trust-bar { background: var(--off-white); border-bottom: 1px solid var(--mid-gray); padding: 1.4rem 0; }
 .trust-bar-inner { display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
 .trust-item { display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark-gray); }
-.trust-item svg { width: 16px; height: 16px; fill: var(--pink); flex-shrink: 0; }
+.trust-item svg { width: 16px; height: 16px; fill: var(--green); flex-shrink: 0; }
 
 /* ─── ABOUT STRIP ─── */
 .about-strip { padding: 7rem 0; }
@@ -50,12 +50,12 @@
 .services-teaser-header .section-subtitle { color: rgba(255,255,255,0.5); margin: 1rem auto 0; text-align: center; }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.1); }
 .service-card { background: var(--black); padding: 3rem 2.5rem; border-bottom: 3px solid transparent; transition: var(--transition); cursor: pointer; }
-.service-card:hover { border-bottom-color: var(--pink); background: #111; }
+.service-card:hover { border-bottom-color: var(--green); background: #111; }
 .service-icon { width: 48px; height: 48px; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; }
-.service-icon svg { width: 22px; height: 22px; stroke: var(--pink); fill: none; stroke-width: 1.5; }
+.service-icon svg { width: 22px; height: 22px; stroke: var(--green); fill: none; stroke-width: 1.5; }
 .service-card h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; color: var(--white); margin-bottom: 0.75rem; }
 .service-card p { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.8; margin-bottom: 1.5rem; }
-.link-arrow { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--pink); display: flex; align-items: center; gap: 0.5rem; }
+.link-arrow { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); display: flex; align-items: center; gap: 0.5rem; }
 
 /* ─── PROCESS ─── */
 .process { padding: 7rem 0; background: var(--off-white); }
@@ -71,8 +71,8 @@
 .testimonials { padding: 7rem 0; }
 .testimonials-header { text-align: center; margin-bottom: 4rem; }
 .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-.testimonial-card { background: var(--off-white); padding: 2.5rem; border-top: 3px solid var(--pink); }
-.testimonial-stars { color: var(--pink); font-size: 0.8rem; letter-spacing: 0.1em; margin-bottom: 1rem; }
+.testimonial-card { background: var(--off-white); padding: 2.5rem; border-top: 3px solid var(--green); }
+.testimonial-stars { color: var(--green); font-size: 0.8rem; letter-spacing: 0.1em; margin-bottom: 1rem; }
 .testimonial-text { font-family: var(--font-serif); font-size: 1.05rem; font-style: italic; font-weight: 300; line-height: 1.75; color: var(--black); margin-bottom: 1.5rem; }
 .testimonial-author { font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--dark-gray); }
   </style>
@@ -137,7 +137,7 @@
 <div class="trust-bar">
   <div class="trust-bar-inner container">
     <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>5-Star Rated Service</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="#ff2d6e" stroke-width="2" fill="none"/></svg>Fully Insured &amp; Bonded</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="#2c4a3e" stroke-width="2" fill="none"/></svg>Fully Insured &amp; Bonded</div>
     <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/></svg>Serving the Region Since 2018</div>
     <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H15V15H9V21H4C3.45 21 3 20.55 3 20V9Z"/></svg>Eco-Friendly Products</div>
     <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M20 6H4C2.9 6 2 6.9 2 8V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6ZM20 18H4V8H20V18ZM11 11H9V9H11V11ZM11 15H9V13H11V15ZM15 11H13V9H15V11ZM15 15H13V13H15V15Z"/></svg>Residential &amp; Commercial</div>
