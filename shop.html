@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — Krystal Klear Clean</title>
+  <link rel="icon" type="image/webp" href="assets/favicon.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/kkc.css">
+  <style>
+.shop-section { padding: 5rem 0; }
+.shop-filter-bar { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 0; border-bottom: 1px solid var(--mid-gray); margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
+.shop-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.shop-filter { padding: 0.4rem 1rem; font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--mid-gray); background: transparent; cursor: pointer; transition: var(--transition); }
+.shop-filter.active, .shop-filter:hover { background: var(--black); color: var(--white); border-color: var(--black); }
+.shop-sort { font-family: var(--font-sans); font-size: 0.72rem; color: var(--dark-gray); }
+.shop-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; }
+.product-card { cursor: pointer; }
+.product-img { aspect-ratio: 3/4; background: var(--light-gray); position: relative; overflow: hidden; margin-bottom: 1rem; transition: var(--transition); display: flex; align-items: center; justify-content: center; }
+.product-card:hover .product-img { opacity: 0.9; }
+.product-badge { position: absolute; top: 1rem; left: 1rem; background: var(--black); color: var(--white); font-family: var(--font-sans); font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 0.7rem; z-index: 2; }
+.product-badge.green { background: var(--green); }
+.product-badge.pink { background: var(--pink); }
+.product-quick { position: absolute; bottom: 0; left: 0; right: 0; background: var(--black); color: var(--white); font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.8rem; text-align: center; transform: translateY(100%); transition: var(--transition); }
+.product-card:hover .product-quick { transform: translateY(0); }
+.product-name { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 400; margin-bottom: 0.3rem; }
+.product-sub { font-size: 0.75rem; color: var(--dark-gray); margin-bottom: 0.4rem; }
+.product-price { font-family: var(--font-sans); font-size: 0.88rem; font-weight: 500; }
+.product-img-inner { font-family: var(--font-serif); font-size: 1.5rem; color: rgba(0,0,0,0.15); text-align: center; padding: 1rem; }
+.shipping-banner { background: var(--off-white); padding: 4rem 0; text-align: center; margin-top: 4rem; }
+
+@media (max-width: 900px) {
+  .shop-grid { grid-template-columns: 1fr 1fr; }
+}
+  </style>
+</head>
+<body>
+<div id="kkc-announcement"></div>
+<div id="kkc-header"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="section-label">The KKC Shop</span>
+    <h1>Shop <em>Clean Living</em></h1>
+    <p>Professional-grade cleaning products, kits, and home care essentials — curated by our team.</p>
+  </div>
+</div>
+
+<div class="shop-section">
+  <div class="container">
+    <div class="shop-filter-bar">
+      <div class="shop-filters">
+        <button class="shop-filter active" onclick="filterProducts(this)">All Products</button>
+        <button class="shop-filter" onclick="filterProducts(this)">Cleaning Kits</button>
+        <button class="shop-filter" onclick="filterProducts(this)">Supplies</button>
+        <button class="shop-filter" onclick="filterProducts(this)">Eco-Friendly</button>
+        <button class="shop-filter" onclick="filterProducts(this)">Gift Sets</button>
+      </div>
+      <div class="shop-sort">Sort by: Featured</div>
+    </div>
+    <div class="shop-grid">
+      <div class="product-card"><div class="product-img"><div class="product-badge green">Best Seller</div><div class="product-quick">Quick View</div><div class="product-img-inner">The Signature<br>Clean Kit</div></div><div class="product-name">The Signature Clean Kit</div><div class="product-sub">All-in-one starter bundle</div><div class="product-price">$49.99</div></div>
+      <div class="product-card"><div class="product-img"><div class="product-quick">Quick View</div><div class="product-img-inner">KKC All-Purpose<br>Spray</div></div><div class="product-name">KKC All-Purpose Spray</div><div class="product-sub">500ml &middot; Unscented or Citrus</div><div class="product-price">$14.99</div></div>
+      <div class="product-card"><div class="product-img"><div class="product-badge pink">New</div><div class="product-quick">Quick View</div><div class="product-img-inner">Fresh Home<br>Gift Set</div></div><div class="product-name">The Fresh Home Gift Set</div><div class="product-sub">Perfect for gifting</div><div class="product-price">$64.99</div></div>
+      <div class="product-card"><div class="product-img"><div class="product-quick">Quick View</div><div class="product-img-inner">Microfibre<br>Cloth Set</div></div><div class="product-name">Microfibre Cloth Set (6pk)</div><div class="product-sub">Professional-grade, washable</div><div class="product-price">$22.00</div></div>
+      <div class="product-card"><div class="product-img"><div class="product-badge green">Eco</div><div class="product-quick">Quick View</div><div class="product-img-inner">Eco Cleaning<br>Tablets</div></div><div class="product-name">Eco Cleaning Tablets</div><div class="product-sub">Just add water &mdash; 30 pack</div><div class="product-price">$19.99</div></div>
+      <div class="product-card"><div class="product-img"><div class="product-quick">Quick View</div><div class="product-img-inner">KKC Cleaning<br>Caddy</div></div><div class="product-name">The KKC Cleaning Caddy</div><div class="product-sub">Organized and ready to go</div><div class="product-price">$34.99</div></div>
+      <div class="product-card"><div class="product-img"><div class="product-quick">Quick View</div><div class="product-img-inner">Linen<br>Room Mist</div></div><div class="product-name">Linen Room Mist</div><div class="product-sub">Fresh linen &amp; clean cotton blend</div><div class="product-price">$18.00</div></div>
+      <div class="product-card"><div class="product-img"><div class="product-badge">Bundle</div><div class="product-quick">Quick View</div><div class="product-img-inner">Bathroom<br>Deep Clean Bundle</div></div><div class="product-name">Bathroom Deep Clean Bundle</div><div class="product-sub">Grout, tile &amp; glass kit</div><div class="product-price">$44.99</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="shipping-banner">
+  <div class="container">
+    <span class="section-label">Free Shipping</span>
+    <h2 class="section-title">On Orders Over <em>$75</em></h2>
+    <p style="font-size:0.88rem;color:var(--dark-gray);margin-top:1rem;">We ship across Canada. Most orders arrive within 3&ndash;5 business days.</p>
+  </div>
+</div>
+
+<div id="kkc-footer"></div>
+<script src="assets/kkc-shared.js"></script>
+<script>
+function filterProducts(el) { document.querySelectorAll('.shop-filter').forEach(f => f.classList.remove('active')); el.classList.add('active'); }
+</script>
+</body>
+</html>

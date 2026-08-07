@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Krystal Klear Clean</title>
+  <link rel="icon" type="image/webp" href="assets/favicon.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/kkc.css">
+  <style>
+.services-full { padding: 6rem 0; }
+.service-row { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; border-bottom: 1px solid var(--mid-gray); }
+.service-row:nth-child(even) .service-row-img { order: 2; }
+.service-row:nth-child(even) .service-row-text { order: 1; }
+.service-row-img { background: var(--light-gray); min-height: 380px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.service-row-img img { width: 100%; height: 100%; object-fit: cover; }
+.service-row-img .img-label { position: absolute; bottom: 1.5rem; left: 1.5rem; background: var(--white); padding: 0.5rem 1rem; font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; }
+.service-row-text { padding: 4rem; display: flex; flex-direction: column; justify-content: center; }
+.service-row-text h2 { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 300; margin-bottom: 1rem; }
+.service-row-text p { font-size: 0.88rem; color: var(--dark-gray); line-height: 1.85; margin-bottom: 1.5rem; }
+.service-features { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem; }
+.service-features li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.82rem; color: var(--dark-gray); }
+.service-features li::before { content: ''; display: block; width: 18px; height: 1px; background: var(--pink); flex-shrink: 0; }
+
+.add-ons { background: var(--off-white); padding: 6rem 0; }
+.add-ons-header { text-align: center; margin-bottom: 3.5rem; }
+.add-ons-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+.add-on-card { background: var(--white); padding: 2rem; text-align: center; border: 1px solid var(--mid-gray); transition: var(--transition); }
+.add-on-card:hover { border-color: var(--black); }
+.add-on-card h4 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 400; margin-bottom: 0.5rem; }
+.add-on-card p { font-size: 0.8rem; color: var(--dark-gray); }
+
+.svc-placeholder { width: 100%; height: 100%; background: linear-gradient(160deg,#e8e4df 0%,#ccc8c2 100%); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 2.5rem; color: rgba(0,0,0,0.12); min-height: 380px; }
+
+@media (max-width: 900px) {
+  .service-row { grid-template-columns: 1fr; }
+  .service-row:nth-child(even) .service-row-img, .service-row:nth-child(even) .service-row-text { order: initial; }
+  .add-ons-grid { grid-template-columns: 1fr 1fr; }
+}
+  </style>
+</head>
+<body>
+<div id="kkc-announcement"></div>
+<div id="kkc-header"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="section-label">What We Do</span>
+    <h1>Our <em>Services</em></h1>
+    <p>Professional cleaning solutions for every space — residential, commercial, and specialty.</p>
+  </div>
+</div>
+
+<div class="services-full">
+  <div class="container">
+
+    <div class="service-row">
+      <div class="service-row-img">
+        <img src="assets/team-becky.png" alt="Residential Cleaning" style="object-position:center;">
+        <div class="img-label">Residential</div>
+      </div>
+      <div class="service-row-text">
+        <span class="section-label">01</span>
+        <h2>Residential Cleaning</h2>
+        <p>Your home is your sanctuary. Our residential cleaning service is designed to give you back your time while ensuring every room is cared for with precision and respect.</p>
+        <ul class="service-features">
+          <li>Standard, Deep Clean &amp; Premium tiers</li>
+          <li>Flexible weekly, bi-weekly, or monthly scheduling</li>
+          <li>Pet-safe and eco-friendly products available</li>
+          <li>Consistent, background-checked cleaning teams</li>
+          <li>100% satisfaction guarantee</li>
+        </ul>
+        <a href="contact.html" class="btn btn-dark">Book Residential Clean</a>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-row-img"><div class="svc-placeholder">Commercial</div><div class="img-label">Commercial</div></div>
+      <div class="service-row-text">
+        <span class="section-label">02</span>
+        <h2>Commercial Cleaning</h2>
+        <p>A clean workplace is a productive one. We serve offices, medical facilities, retail spaces, and more — delivering consistent, professional results on a schedule that works around your business hours.</p>
+        <ul class="service-features">
+          <li>After-hours and weekend availability</li>
+          <li>Tailored cleaning plans for your space</li>
+          <li>Fully insured and WHMIS-trained staff</li>
+          <li>Monthly, weekly, or daily service contracts</li>
+          <li>Dedicated account manager</li>
+        </ul>
+        <a href="contact.html" class="btn btn-dark">Get a Commercial Quote</a>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-row-img"><div class="svc-placeholder">Post-Construction</div><div class="img-label">Post-Construction</div></div>
+      <div class="service-row-text">
+        <span class="section-label">03</span>
+        <h2>Post-Construction Cleaning</h2>
+        <p>After the dust settles, we take over. Our post-construction teams are trained to handle renovation debris, construction dust, and finishing residue — leaving your space truly move-in ready.</p>
+        <ul class="service-features">
+          <li>Rough clean, final clean &amp; touch-up stages</li>
+          <li>Window and glass polishing</li>
+          <li>HVAC vent dusting and filter check</li>
+          <li>Debris removal coordination</li>
+          <li>Suitable for residential and commercial builds</li>
+        </ul>
+        <a href="contact.html" class="btn btn-dark">Request Post-Construction Quote</a>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-row-img"><div class="svc-placeholder">Move Clean</div><div class="img-label">Move In / Move Out</div></div>
+      <div class="service-row-text">
+        <span class="section-label">04</span>
+        <h2>Move In / Move Out</h2>
+        <p>Whether you're leaving a property or arriving at a new one, our move cleans ensure nothing is overlooked — inside cabinets, behind appliances, every corner.</p>
+        <ul class="service-features">
+          <li>Inside appliances, cabinets &amp; drawers</li>
+          <li>Baseboard and door frame detailing</li>
+          <li>Light fixtures and ceiling fans</li>
+          <li>Perfect for rental handovers and property sales</li>
+          <li>Available on short notice</li>
+        </ul>
+        <a href="contact.html" class="btn btn-dark">Book Move Clean</a>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-row-img"><div class="svc-placeholder">Airbnb</div><div class="img-label">Rental &amp; Airbnb</div></div>
+      <div class="service-row-text">
+        <span class="section-label">05</span>
+        <h2>Rental &amp; Airbnb Turnover</h2>
+        <p>Keep your guests wowed and your reviews five-star. Our turnover service is fast, reliable, and thorough — with laundry, restocking, and damage reporting included.</p>
+        <ul class="service-features">
+          <li>Linen change and laundry service</li>
+          <li>Guest amenity restocking</li>
+          <li>Damage and wear-and-tear reporting</li>
+          <li>Integrated with major rental platforms</li>
+          <li>Same-day turnovers available</li>
+        </ul>
+        <a href="contact.html" class="btn btn-dark">Set Up Turnover Service</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="add-ons">
+  <div class="container">
+    <div class="add-ons-header">
+      <span class="section-label">Enhance Your Clean</span>
+      <h2 class="section-title">Add-On <em>Services</em></h2>
+      <p class="section-subtitle" style="text-align:center;margin:1rem auto 0;">Customize any package with these premium extras.</p>
+    </div>
+    <div class="add-ons-grid">
+      <div class="add-on-card"><h4>Interior Windows</h4><p>Crystal-clear glass throughout your space</p></div>
+      <div class="add-on-card"><h4>Oven Deep Clean</h4><p>Full interior degrease and polish</p></div>
+      <div class="add-on-card"><h4>Fridge Clean-Out</h4><p>Empty, wipe, and sanitize your fridge</p></div>
+      <div class="add-on-card"><h4>Laundry &amp; Folding</h4><p>Wash, dry, and neatly fold your linens</p></div>
+      <div class="add-on-card"><h4>Organizing Service</h4><p>Declutter and organize any room or space</p></div>
+      <div class="add-on-card"><h4>Garage Clean</h4><p>Sweep, dust, and organize your garage</p></div>
+      <div class="add-on-card"><h4>Balcony / Patio</h4><p>Outdoor surface cleaning and furniture wipe-down</p></div>
+      <div class="add-on-card"><h4>Scent Treatment</h4><p>Eco-friendly room freshening and deodorizing</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Not Sure What You Need?</h2>
+    <p>Contact us for a custom quote — we'll build the perfect clean for your space.</p>
+    <a href="contact.html" class="btn btn-outline-white">Get a Free Quote</a>
+  </div>
+</div>
+
+<div id="kkc-footer"></div>
+<script src="assets/kkc-shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — Krystal Klear Clean</title>
+  <link rel="icon" type="image/webp" href="assets/favicon.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/kkc.css">
+  <style>
+.pricing-section { padding: 6rem 0; }
+.pricing-intro { text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 0.88rem; color: var(--dark-gray); }
+.pricing-tabs { display: flex; justify-content: center; margin-bottom: 3rem; border: 1px solid var(--mid-gray); width: fit-content; margin-left: auto; margin-right: auto; }
+.pricing-tab { padding: 0.75rem 2rem; font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; background: var(--white); color: var(--dark-gray); border: none; transition: var(--transition); }
+.pricing-tab.active, .pricing-tab:hover { background: var(--black); color: var(--white); }
+.pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--mid-gray); margin-bottom: 3rem; }
+.pricing-card { background: var(--white); padding: 3rem 2.5rem; }
+.pricing-card.featured { background: var(--black); }
+.pricing-card .tier { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dark-gray); margin-bottom: 1rem; }
+.pricing-card.featured .tier { color: var(--pink); }
+.pricing-card h3 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 300; margin-bottom: 0.5rem; }
+.pricing-card.featured h3 { color: var(--white); }
+.pricing-card .price { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 300; line-height: 1; margin-bottom: 0.3rem; }
+.pricing-card.featured .price { color: var(--white); }
+.pricing-card .price-note { font-size: 0.75rem; color: var(--dark-gray); margin-bottom: 2rem; }
+.pricing-card.featured .price-note { color: rgba(255,255,255,0.4); }
+.pricing-features { list-style: none; margin-bottom: 2.5rem; }
+.pricing-features li { font-size: 0.83rem; padding: 0.6rem 0; border-bottom: 1px solid var(--light-gray); color: var(--dark-gray); display: flex; gap: 0.6rem; }
+.pricing-card.featured .pricing-features li { border-bottom-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.65); }
+.pricing-features li::before { content: '✓'; color: var(--green); font-size: 0.75rem; flex-shrink: 0; margin-top: 0.05rem; }
+.pricing-card.featured .pricing-features li::before { color: var(--pink); }
+
+.pricing-faq { background: var(--off-white); padding: 5rem 0; }
+.pricing-faq-inner { max-width: 760px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--mid-gray); }
+.faq-q { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; user-select: none; }
+.faq-q::after { content: '+'; font-size: 1.2rem; color: var(--pink); transition: var(--transition); }
+.faq-item.open .faq-q::after { content: '−'; }
+.faq-a { font-size: 0.85rem; color: var(--dark-gray); line-height: 1.8; padding-bottom: 1.5rem; display: none; }
+.faq-item.open .faq-a { display: block; }
+
+@media (max-width: 900px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+<div id="kkc-announcement"></div>
+<div id="kkc-header"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="section-label">Transparent Pricing</span>
+    <h1>Simple, <em>Honest</em> Pricing</h1>
+    <p>No hidden fees. No surprises. Just great cleaning at a fair price.</p>
+  </div>
+</div>
+
+<div class="pricing-section">
+  <div class="container">
+    <p class="pricing-intro">All pricing is based on the size of your space and the level of service selected. Custom quotes available for commercial properties and specialty cleans.</p>
+    <div class="pricing-tabs">
+      <button class="pricing-tab active" onclick="switchTab(this)">Residential</button>
+      <button class="pricing-tab" onclick="switchTab(this)">Commercial</button>
+      <button class="pricing-tab" onclick="switchTab(this)">Specialty</button>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="tier">Standard</div>
+        <h3>Essential Clean</h3>
+        <div class="price">$120<span style="font-size:1rem;color:var(--dark-gray);">+</span></div>
+        <div class="price-note">Starting price &middot; varies by size</div>
+        <ul class="pricing-features">
+          <li>Kitchen surfaces &amp; appliance exteriors</li>
+          <li>Bathrooms cleaned &amp; sanitized</li>
+          <li>Vacuuming &amp; mopping all floors</li>
+          <li>Dusting surfaces &amp; furniture</li>
+          <li>Trash removal</li>
+          <li>Bed making (linens provided)</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline" style="display:block;text-align:center;">Book Essential</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="tier">Most Popular</div>
+        <h3>Premium Clean</h3>
+        <div class="price">$195<span style="font-size:1rem;color:rgba(255,255,255,0.4);">+</span></div>
+        <div class="price-note">Starting price &middot; varies by size</div>
+        <ul class="pricing-features">
+          <li>Everything in Essential, plus:</li>
+          <li>Inside oven &amp; microwave</li>
+          <li>Inside fridge clean</li>
+          <li>Baseboards &amp; door frames</li>
+          <li>Light switches &amp; fixtures</li>
+          <li>Interior windows</li>
+          <li>Closet interiors</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline-white" style="display:block;text-align:center;">Book Premium</a>
+      </div>
+      <div class="pricing-card">
+        <div class="tier">Deep Clean</div>
+        <h3>Luxury Detail</h3>
+        <div class="price">$280<span style="font-size:1rem;color:var(--dark-gray);">+</span></div>
+        <div class="price-note">Starting price &middot; varies by size</div>
+        <ul class="pricing-features">
+          <li>Everything in Premium, plus:</li>
+          <li>Grout scrubbing &amp; tile detailing</li>
+          <li>Behind &amp; under appliances</li>
+          <li>Blind &amp; shutter cleaning</li>
+          <li>Cabinet interiors throughout</li>
+          <li>Scent treatment included</li>
+          <li>Priority scheduling</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline" style="display:block;text-align:center;">Book Luxury Detail</a>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:0.82rem;color:var(--dark-gray);">Need something custom? <a href="contact.html" style="color:var(--pink);text-decoration:underline;">Request a quote</a> for commercial spaces, estates, or ongoing contracts.</p>
+  </div>
+</div>
+
+<div class="pricing-faq">
+  <div class="container">
+    <div class="pricing-faq-inner">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <span class="section-label">Frequently Asked</span>
+        <h2 class="section-title">Questions About <em>Pricing</em></h2>
+      </div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you offer discounts for recurring bookings?</div><div class="faq-a">Yes! We offer 10% off for weekly bookings and 5% off for bi-weekly service. Discounts are applied automatically when you set up recurring service.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is your cancellation policy?</div><div class="faq-a">We ask for 24 hours notice for cancellations. Cancellations made within 24 hours may be subject to a small fee to cover the team's reserved time.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Are your products eco-friendly?</div><div class="faq-a">We offer eco-friendly and pet-safe product options on all services. Simply let us know your preference at the time of booking.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What if I'm not satisfied with my clean?</div><div class="faq-a">We stand behind our work with a 100% satisfaction guarantee. If anything was missed, contact us within 24 hours and we'll return to make it right at no charge.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I pay?</div><div class="faq-a">We accept all major credit cards, e-transfer, and cash. Payment is due at time of service for one-time cleans. Recurring clients are billed after each visit.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Ready to Get <em style="font-style:italic;">Started?</em></h2>
+    <p>Book online in minutes. Same-week availability. Satisfaction guaranteed.</p>
+    <a href="contact.html" class="btn btn-outline-white">Book Now</a>
+  </div>
+</div>
+
+<div id="kkc-footer"></div>
+<script src="assets/kkc-shared.js"></script>
+<script>
+function switchTab(el) { document.querySelectorAll('.pricing-tab').forEach(t => t.classList.remove('active')); el.classList.add('active'); }
+function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
+</script>
+</body>
+</html>

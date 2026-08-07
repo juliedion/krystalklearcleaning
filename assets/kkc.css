@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+:root {
+  --black:      #0a0a0a;
+  --white:      #ffffff;
+  --off-white:  #f8f7f5;
+  --light-gray: #f2f1ef;
+  --mid-gray:   #d4d0cb;
+  --dark-gray:  #6b6560;
+  --green:      #2c4a3e;
+  --pink:       #ff2d6e;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Jost', 'Helvetica Neue', Arial, sans-serif;
+  --max-w:      1240px;
+  --transition: 0.3s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* ─── ANNOUNCEMENT BAR ─── */
+.announcement-bar {
+  background: var(--black); height: 36px; overflow: hidden;
+  display: flex; align-items: center;
+}
+.announcement-track {
+  display: flex; align-items: center;
+  animation: marquee 32s linear infinite;
+  white-space: nowrap; will-change: transform;
+}
+.announcement-track:hover { animation-play-state: paused; }
+.announcement-item {
+  font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--white); padding: 0 2.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.announcement-item .dot {
+  display: inline-block; width: 4px; height: 4px; border-radius: 50%;
+  background: var(--pink); flex-shrink: 0;
+}
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ─── HEADER ─── */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--white); border-bottom: 1px solid var(--mid-gray);
+  padding: 0 3rem; display: flex; align-items: center; justify-content: space-between;
+  height: 110px;
+}
+.site-header .logo { display: flex; align-items: center; }
+.site-header .logo img { height: 90px; width: auto; display: block; }
+.site-nav { display: flex; gap: 2.5rem; align-items: center; }
+.site-nav a { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--black); transition: var(--transition); }
+.site-nav a:hover, .site-nav a.active { color: var(--pink); }
+.site-nav .btn-nav {
+  background: var(--black); color: var(--white); padding: 0.65rem 1.6rem;
+  font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+  transition: var(--transition);
+}
+.site-nav .btn-nav:hover { background: var(--pink); color: var(--white); }
+
+/* ─── FOOTER ─── */
+.site-footer { background: var(--black); color: rgba(255,255,255,0.6); padding: 5rem 0 2rem; }
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+  margin-bottom: 4rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-brand img { height: 80px; width: auto; margin-bottom: 1.2rem; filter: brightness(0) invert(1); }
+.footer-brand p { font-size: 0.85rem; line-height: 1.8; max-width: 280px; }
+.footer-col h5 { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--white); margin-bottom: 1.2rem; }
+.footer-col ul li { margin-bottom: 0.6rem; }
+.footer-col ul li a { font-size: 0.82rem; transition: var(--transition); }
+.footer-col ul li a:hover { color: var(--white); }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  font-size: 0.72rem; color: rgba(255,255,255,0.3);
+}
+.footer-social { display: flex; gap: 1rem; }
+.footer-social a {
+  width: 34px; height: 34px; border: 1px solid rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; color: rgba(255,255,255,0.5); transition: var(--transition);
+}
+.footer-social a:hover { border-color: var(--white); color: var(--white); }
+
+/* ─── SHARED COMPONENTS ─── */
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
+.section-label { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--pink); display: block; margin-bottom: 1rem; }
+.section-title { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.2; color: var(--black); }
+.section-title em { font-style: italic; color: var(--pink); }
+.section-subtitle { font-family: var(--font-sans); font-size: 0.9rem; color: var(--dark-gray); max-width: 560px; line-height: 1.85; margin-top: 1.2rem; }
+.divider { width: 48px; height: 1px; background: var(--pink); margin: 1.5rem 0; }
+.btn { display: inline-block; font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.2rem; transition: var(--transition); cursor: pointer; border: none; }
+.btn-dark { background: var(--black); color: var(--white); border: 1px solid var(--black); }
+.btn-dark:hover { background: var(--pink); border-color: var(--pink); }
+.btn-outline { background: transparent; color: var(--black); border: 1px solid var(--black); }
+.btn-outline:hover { background: var(--black); color: var(--white); }
+.btn-outline-white { background: transparent; color: var(--white); border: 1px solid var(--white); }
+.btn-outline-white:hover { background: var(--white); color: var(--black); }
+
+/* ─── PAGE HERO ─── */
+.page-hero { background: var(--black); padding: 7rem 0 5rem; text-align: center; position: relative; overflow: hidden; }
+.page-hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0, rgba(255,255,255,0.015) 1px, transparent 0, transparent 50%); background-size: 30px 30px; }
+.page-hero .section-label { position: relative; }
+.page-hero h1 { font-family: var(--font-serif); font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 300; color: var(--white); line-height: 1.15; position: relative; }
+.page-hero h1 em { font-style: italic; color: var(--pink); }
+.page-hero p { font-size: 0.9rem; color: rgba(255,255,255,0.5); max-width: 500px; margin: 1.2rem auto 0; position: relative; }
+
+/* ─── CTA BANNER ─── */
+.cta-banner { background: var(--green); padding: 5rem 0; text-align: center; }
+.cta-banner h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 300; color: var(--white); margin-bottom: 1rem; }
+.cta-banner p { font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem; }

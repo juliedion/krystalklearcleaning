@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Krystal Klear Clean</title>
+  <link rel="icon" type="image/webp" href="assets/favicon.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/kkc.css">
+  <style>
+.about-hero { background: var(--black); padding: 7rem 0; text-align: center; position: relative; overflow: hidden; }
+.about-hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0, rgba(255,255,255,0.015) 1px, transparent 0, transparent 50%); background-size: 30px 30px; }
+.about-hero .section-label { position: relative; color: var(--pink); }
+.about-hero h1 { font-family: var(--font-serif); font-size: clamp(2.8rem,5vw,4.5rem); font-weight: 300; color: var(--white); line-height: 1.15; position: relative; }
+.about-hero h1 em { font-style: italic; color: var(--pink); }
+.about-hero p { font-size: 0.9rem; color: rgba(255,255,255,0.5); max-width: 520px; margin: 1.2rem auto 0; line-height: 1.9; position: relative; }
+
+.about-story { padding: 7rem 0; }
+.about-story-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 7rem; align-items: center; }
+.about-story-img { position: relative; }
+.about-story-img img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top; display: block; }
+.about-story-img-accent { position: absolute; bottom: -2rem; right: -2rem; background: var(--black); color: var(--white); padding: 2rem; width: 180px; text-align: center; }
+.about-story-img-accent .num { font-family: var(--font-serif); font-size: 3rem; font-weight: 300; line-height: 1; }
+.about-story-img-accent .lbl { font-family: var(--font-sans); font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 0.3rem; }
+
+.about-values { background: var(--off-white); padding: 6rem 0; }
+.about-values-header { text-align: center; margin-bottom: 4rem; }
+.values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--mid-gray); }
+.value-card { background: var(--white); padding: 3rem 2.5rem; }
+.value-card .value-num { font-family: var(--font-serif); font-size: 3rem; font-weight: 300; color: var(--light-gray); line-height: 1; margin-bottom: 1rem; }
+.value-card h3 { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 400; margin-bottom: 0.75rem; }
+.value-card p { font-size: 0.84rem; color: var(--dark-gray); line-height: 1.85; }
+
+.team-section { padding: 7rem 0; }
+.team-header { text-align: center; margin-bottom: 5rem; }
+.team-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3rem; }
+.team-card { text-align: center; }
+.team-card-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; margin-bottom: 1.5rem; filter: grayscale(20%); transition: var(--transition); display: block; background: var(--light-gray); }
+.team-card:hover .team-card-img { filter: grayscale(0%); }
+.member-name { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.3rem; }
+.member-title { font-family: var(--font-sans); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--pink); }
+.member-divider { width: 30px; height: 1px; background: var(--mid-gray); margin: 0.8rem auto; }
+
+.join-banner { background: var(--black); padding: 5rem 0; }
+.join-banner-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.join-banner h2 { font-family: var(--font-serif); font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; color: var(--white); margin-bottom: 1rem; }
+.join-banner h2 em { font-style: italic; color: var(--pink); }
+.join-banner p { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.85; }
+.join-perks { display: flex; flex-direction: column; gap: 1rem; }
+.join-perk { display: flex; gap: 1rem; align-items: flex-start; }
+.join-perk-icon { color: var(--pink); font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0; }
+.join-perk-text h5 { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 500; color: var(--white); margin-bottom: 0.2rem; }
+.join-perk-text p { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin: 0; }
+  </style>
+</head>
+<body>
+<div id="kkc-announcement"></div>
+<div id="kkc-header"></div>
+
+<div class="about-hero">
+  <div class="container">
+    <span class="section-label">Who We Are</span>
+    <h1>Built on <em>Trust,</em><br>Driven by Care</h1>
+    <p>Krystal Klear Clean is more than a cleaning company — we're a team of dedicated professionals who believe a clean space changes everything.</p>
+  </div>
+</div>
+
+<div class="about-story">
+  <div class="container">
+    <div class="about-story-inner">
+      <div class="about-story-img">
+        <img src="assets/team-becky.png" alt="Becky, Founder">
+        <div class="about-story-img-accent">
+          <div class="num">7+</div>
+          <div class="lbl">Years Serving<br>the Community</div>
+        </div>
+      </div>
+      <div>
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">From One Home<br>to <em>Hundreds</em></h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Krystal Klear Clean was founded by Becky with a simple mission: provide exceptional, reliable cleaning services that families and businesses can truly count on.</p>
+        <p style="font-size:0.86rem;color:var(--dark-gray);line-height:1.9;margin-top:1rem;">What started as a single-person operation has grown into a trusted team of skilled cleaning professionals covering residential, commercial, rental, and specialty cleaning needs. Through every stage of that growth, we've never lost the personal touch that sets us apart.</p>
+        <p style="font-size:0.86rem;color:var(--dark-gray);line-height:1.9;margin-top:1rem;">We invest in our team, our training, and our community — because we believe the best results come from people who genuinely care about the work they do.</p>
+        <a href="contact.html" class="btn btn-dark" style="margin-top:2rem;">Book a Clean</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about-values">
+  <div class="container">
+    <div class="about-values-header">
+      <span class="section-label">What Drives Us</span>
+      <h2 class="section-title">Our <em>Values</em></h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card"><div class="value-num">01</div><h3>Integrity</h3><p>We show up on time, do what we say, and treat every home and business as if it were our own. No shortcuts, no excuses.</p></div>
+      <div class="value-card"><div class="value-num">02</div><h3>Excellence</h3><p>Good enough is never good enough for us. We hold ourselves to a higher standard and back every clean with a 100% satisfaction guarantee.</p></div>
+      <div class="value-card"><div class="value-num">03</div><h3>Community</h3><p>We are part of the communities we serve. Through KKC Cares, we give back — one free clean at a time — to those who need it most.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="team-section">
+  <div class="container">
+    <div class="team-header">
+      <span class="section-label">The People Behind the Clean</span>
+      <h2 class="section-title">Meet Our <em>Team</em></h2>
+      <p class="section-subtitle" style="text-align:center;margin:1rem auto 0;">Every member of the KKC team is background-checked, trained, and passionate about delivering an outstanding experience.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card"><img src="assets/team-becky.png" alt="Becky" class="team-card-img"><div class="member-name">Becky</div><div class="member-title">Founder</div><div class="member-divider"></div></div>
+      <div class="team-card"><img src="assets/team-marissa.png" alt="Marissa" class="team-card-img"><div class="member-name">Marissa</div><div class="member-title">General Manager</div><div class="member-divider"></div></div>
+      <div class="team-card"><img src="assets/team-annie.png" alt="Annie" class="team-card-img"><div class="member-name">Annie</div><div class="member-title">Field Manager</div><div class="member-divider"></div></div>
+      <div class="team-card"><img src="assets/team-liana.png" alt="Liana" class="team-card-img"><div class="member-name">Liana</div><div class="member-title">Team Lead</div><div class="member-divider"></div></div>
+      <div class="team-card"><img src="assets/team-danielle.png" alt="Danielle" class="team-card-img"><div class="member-name">Danielle</div><div class="member-title">Office Manager</div><div class="member-divider"></div></div>
+      <div class="team-card"><img src="assets/team-savannah.png" alt="Savannah" class="team-card-img"><div class="member-name">Savannah</div><div class="member-title">Cleaning Technician</div><div class="member-divider"></div></div>
+      <div class="team-card"><img src="assets/team-kim.png" alt="Kim" class="team-card-img"><div class="member-name">Kim</div><div class="member-title">Cleaning Technician</div><div class="member-divider"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="join-banner">
+  <div class="container">
+    <div class="join-banner-inner">
+      <div>
+        <span class="section-label">We're Hiring</span>
+        <h2>Join the <em>KKC Family</em></h2>
+        <p>We're always looking for motivated, detail-oriented people to join our growing team. We look forward to hearing from you!</p>
+        <a href="contact.html" class="btn btn-outline-white" style="margin-top:2rem;">Apply Now</a>
+      </div>
+      <div class="join-perks">
+        <div class="join-perk"><div class="join-perk-icon">✓</div><div class="join-perk-text"><h5>Competitive Pay</h5><p>Above-average wages with tips and performance bonuses.</p></div></div>
+        <div class="join-perk"><div class="join-perk-icon">✓</div><div class="join-perk-text"><h5>Flexible Scheduling</h5><p>Full-time and part-time positions available.</p></div></div>
+        <div class="join-perk"><div class="join-perk-icon">✓</div><div class="join-perk-text"><h5>Supportive Team Culture</h5><p>We treat every team member with respect and appreciation.</p></div></div>
+        <div class="join-perk"><div class="join-perk-icon">✓</div><div class="join-perk-text"><h5>Training Provided</h5><p>No experience needed — we train you with our proven system.</p></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="kkc-footer"></div>
+<script src="assets/kkc-shared.js"></script>
+</body>
+</html>
