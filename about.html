@@ -12,9 +12,9 @@
   <style>
 .about-hero { background: var(--black); padding: 7rem 0; text-align: center; position: relative; overflow: hidden; }
 .about-hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0, rgba(255,255,255,0.015) 1px, transparent 0, transparent 50%); background-size: 30px 30px; }
-.about-hero .section-label { position: relative; color: var(--green); }
+.about-hero .section-label { position: relative; color: var(--green-light); }
 .about-hero h1 { font-family: var(--font-serif); font-size: clamp(2.8rem,5vw,4.5rem); font-weight: 300; color: var(--white); line-height: 1.15; position: relative; }
-.about-hero h1 em { font-style: italic; color: var(--green); }
+.about-hero h1 em { font-style: italic; color: var(--green-light); }
 .about-hero p { font-size: 0.9rem; color: rgba(255,255,255,0.5); max-width: 520px; margin: 1.2rem auto 0; line-height: 1.9; position: relative; }
 
 .about-story { padding: 7rem 0; }
@@ -45,12 +45,13 @@
 
 .join-banner { background: var(--black); padding: 5rem 0; }
 .join-banner-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.join-banner .section-label { color: var(--green-light); }
 .join-banner h2 { font-family: var(--font-serif); font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; color: var(--white); margin-bottom: 1rem; }
-.join-banner h2 em { font-style: italic; color: var(--green); }
+.join-banner h2 em { font-style: italic; color: var(--green-light); }
 .join-banner p { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.85; }
 .join-perks { display: flex; flex-direction: column; gap: 1rem; }
 .join-perk { display: flex; gap: 1rem; align-items: flex-start; }
-.join-perk-icon { color: var(--green); font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0; }
+.join-perk-icon { color: var(--green-light); font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0; }
 .join-perk-text h5 { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 500; color: var(--white); margin-bottom: 0.2rem; }
 .join-perk-text p { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin: 0; }
   </style>

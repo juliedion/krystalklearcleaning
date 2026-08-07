@@ -18,10 +18,10 @@
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.05) 100%); }
 .hero-pattern { position: absolute; inset: 0; opacity: 0.04; background-image: repeating-linear-gradient(45deg, var(--white) 0, var(--white) 1px, transparent 0, transparent 50%); background-size: 30px 30px; }
 .hero-content { position: relative; z-index: 2; padding: 0 6rem; max-width: 760px; }
-.hero-eyebrow { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--green); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
-.hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--green); }
+.hero-eyebrow { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--green-light); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+.hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--green-light); }
 .hero-title { font-family: var(--font-serif); font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.1; color: var(--white); margin-bottom: 1.5rem; }
-.hero-title em { font-style: italic; color: var(--green); display: block; }
+.hero-title em { font-style: italic; color: var(--green-light); display: block; }
 .hero-body { font-family: var(--font-sans); font-size: 0.95rem; color: rgba(255,255,255,0.65); max-width: 480px; line-height: 1.9; margin-bottom: 2.5rem; }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 .hero-scroll { position: absolute; bottom: 2.5rem; left: 6rem; z-index: 2; display: flex; align-items: center; gap: 0.8rem; font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
@@ -46,16 +46,18 @@
 /* ─── SERVICES TEASER ─── */
 .services-teaser { background: var(--black); padding: 7rem 0; }
 .services-teaser-header { text-align: center; margin-bottom: 4rem; }
+.services-teaser-header .section-label { color: var(--green-light); }
 .services-teaser-header .section-title { color: var(--white); }
+.services-teaser-header .section-title em { color: var(--green-light); }
 .services-teaser-header .section-subtitle { color: rgba(255,255,255,0.5); margin: 1rem auto 0; text-align: center; }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.1); }
 .service-card { background: var(--black); padding: 3rem 2.5rem; border-bottom: 3px solid transparent; transition: var(--transition); cursor: pointer; }
-.service-card:hover { border-bottom-color: var(--green); background: #111; }
+.service-card:hover { border-bottom-color: var(--green-light); background: #111; }
 .service-icon { width: 48px; height: 48px; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; }
-.service-icon svg { width: 22px; height: 22px; stroke: var(--green); fill: none; stroke-width: 1.5; }
+.service-icon svg { width: 22px; height: 22px; stroke: var(--green-light); fill: none; stroke-width: 1.5; }
 .service-card h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; color: var(--white); margin-bottom: 0.75rem; }
 .service-card p { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.8; margin-bottom: 1.5rem; }
-.link-arrow { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); display: flex; align-items: center; gap: 0.5rem; }
+.link-arrow { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-light); display: flex; align-items: center; gap: 0.5rem; }
 
 /* ─── PROCESS ─── */
 .process { padding: 7rem 0; background: var(--off-white); }

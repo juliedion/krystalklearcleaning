@@ -8,6 +8,7 @@
   --mid-gray:   #d4d0cb;
   --dark-gray:  #6b6560;
   --green:      #2c4a3e;
+  --green-light: #6fbf9a;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans:  'Jost', 'Helvetica Neue', Arial, sans-serif;
   --max-w:      1240px;
@@ -39,7 +40,7 @@ ul { list-style: none; }
 }
 .announcement-item .dot {
   display: inline-block; width: 4px; height: 4px; border-radius: 50%;
-  background: var(--green); flex-shrink: 0;
+  background: var(--green-light); flex-shrink: 0;
 }
 @keyframes marquee {
   0%   { transform: translateX(0); }
@@ -107,9 +108,9 @@ ul { list-style: none; }
 /* ─── PAGE HERO ─── */
 .page-hero { background: var(--black); padding: 7rem 0 5rem; text-align: center; position: relative; overflow: hidden; }
 .page-hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0, rgba(255,255,255,0.015) 1px, transparent 0, transparent 50%); background-size: 30px 30px; }
-.page-hero .section-label { position: relative; }
+.page-hero .section-label { position: relative; color: var(--green-light); }
 .page-hero h1 { font-family: var(--font-serif); font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 300; color: var(--white); line-height: 1.15; position: relative; }
-.page-hero h1 em { font-style: italic; color: var(--green); }
+.page-hero h1 em { font-style: italic; color: var(--green-light); }
 .page-hero p { font-size: 0.9rem; color: rgba(255,255,255,0.5); max-width: 500px; margin: 1.2rem auto 0; position: relative; }
 
 /* ─── CTA BANNER ─── */
