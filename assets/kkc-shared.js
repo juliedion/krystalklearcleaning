@@ -36,7 +36,7 @@ const navHTML = navLinks.map(l =>
 
 const siteHeader = `
 <header class="site-header">
-  <div class="logo"><a href="index.html"><img src="assets/kkc-logo.webp" alt="Krystal Klear Clean"></a></div>
+  <div class="logo"><a href="index.html"><img src="assets/kkc-logo-shiny.webp?v=2" alt="Krystal Klear Clean"></a></div>
   <nav class="site-nav">
     ${navHTML}
     <a href="contact.html" class="btn-nav">Book Now</a>
@@ -48,7 +48,7 @@ const siteFooter = `
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/kkc-logo.webp" alt="Krystal Klear Clean">
+        <img src="assets/kkc-logo-shiny.webp?v=2" alt="Krystal Klear Clean">
         <p>Delivering an elevated standard of clean to homes and businesses. Trusted, insured, and devoted to your space.</p>
       </div>
       <div class="footer-col"><h5>Services</h5><ul>

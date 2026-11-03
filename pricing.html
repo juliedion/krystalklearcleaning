@@ -11,34 +11,34 @@
   <link rel="stylesheet" href="assets/kkc.css">
   <style>
 .pricing-section { padding: 6rem 0; }
-.pricing-intro { text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 0.88rem; color: var(--dark-gray); }
+.pricing-intro { text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.21rem; color: var(--dark-gray); }
 .pricing-tabs { display: flex; justify-content: center; margin-bottom: 3rem; border: 1px solid var(--mid-gray); width: fit-content; margin-left: auto; margin-right: auto; }
-.pricing-tab { padding: 0.75rem 2rem; font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; background: var(--white); color: var(--dark-gray); border: none; transition: var(--transition); }
+.pricing-tab { padding: 0.75rem 2rem; font-family: var(--font-sans); font-size: 0.92rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; background: var(--white); color: var(--dark-gray); border: none; transition: var(--transition); }
 .pricing-tab.active, .pricing-tab:hover { background: var(--black); color: var(--white); }
 .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--mid-gray); margin-bottom: 3rem; }
 .pricing-card { background: var(--white); padding: 3rem 2.5rem; }
 .pricing-card.featured { background: var(--black); }
-.pricing-card .tier { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dark-gray); margin-bottom: 1rem; }
+.pricing-card .tier { font-family: var(--font-sans); font-size: 0.89rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dark-gray); margin-bottom: 1rem; }
 .pricing-card.featured .tier { color: var(--green-light); }
 .pricing-card h3 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 300; margin-bottom: 0.5rem; }
 .pricing-card.featured h3 { color: var(--white); }
 .pricing-card .price { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 300; line-height: 1; margin-bottom: 0.3rem; }
 .pricing-card.featured .price { color: var(--white); }
-.pricing-card .price-note { font-size: 0.75rem; color: var(--dark-gray); margin-bottom: 2rem; }
+.pricing-card .price-note { font-size: 1.02rem; color: var(--dark-gray); margin-bottom: 2rem; }
 .pricing-card.featured .price-note { color: rgba(255,255,255,0.4); }
 .pricing-features { list-style: none; margin-bottom: 2.5rem; }
-.pricing-features li { font-size: 0.83rem; padding: 0.6rem 0; border-bottom: 1px solid var(--light-gray); color: var(--dark-gray); display: flex; gap: 0.6rem; }
+.pricing-features li { font-size: 1.16rem; padding: 0.6rem 0; border-bottom: 1px solid var(--light-gray); color: var(--dark-gray); display: flex; gap: 0.6rem; }
 .pricing-card.featured .pricing-features li { border-bottom-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.65); }
-.pricing-features li::before { content: '✓'; color: var(--green); font-size: 0.75rem; flex-shrink: 0; margin-top: 0.05rem; }
+.pricing-features li::before { content: '✓'; color: var(--green); font-size: 1.02rem; flex-shrink: 0; margin-top: 0.05rem; }
 .pricing-card.featured .pricing-features li::before { color: var(--green-light); }
 
 .pricing-faq { background: var(--off-white); padding: 5rem 0; }
 .pricing-faq-inner { max-width: 760px; margin: 0 auto; }
 .faq-item { border-bottom: 1px solid var(--mid-gray); }
-.faq-q { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; user-select: none; }
-.faq-q::after { content: '+'; font-size: 1.2rem; color: var(--green); transition: var(--transition); }
+.faq-q { font-family: var(--font-sans); font-size: 1.24rem; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; user-select: none; }
+.faq-q::after { content: '+'; font-size: 1.43rem; color: var(--green); transition: var(--transition); }
 .faq-item.open .faq-q::after { content: '−'; }
-.faq-a { font-size: 0.85rem; color: var(--dark-gray); line-height: 1.8; padding-bottom: 1.5rem; display: none; }
+.faq-a { font-size: 1.19rem; color: var(--dark-gray); line-height: 1.8; padding-bottom: 1.5rem; display: none; }
 .faq-item.open .faq-a { display: block; }
 
 @media (max-width: 900px) {
@@ -70,7 +70,7 @@
       <div class="pricing-card">
         <div class="tier">Standard</div>
         <h3>Essential Clean</h3>
-        <div class="price">$120<span style="font-size:1rem;color:var(--dark-gray);">+</span></div>
+        <div class="price">$120<span style="font-size:1.3rem;color:var(--dark-gray);">+</span></div>
         <div class="price-note">Starting price &middot; varies by size</div>
         <ul class="pricing-features">
           <li>Kitchen surfaces &amp; appliance exteriors</li>
@@ -85,7 +85,7 @@
       <div class="pricing-card featured">
         <div class="tier">Most Popular</div>
         <h3>Premium Clean</h3>
-        <div class="price">$195<span style="font-size:1rem;color:rgba(255,255,255,0.4);">+</span></div>
+        <div class="price">$195<span style="font-size:1.3rem;color:rgba(255,255,255,0.4);">+</span></div>
         <div class="price-note">Starting price &middot; varies by size</div>
         <ul class="pricing-features">
           <li>Everything in Essential, plus:</li>
@@ -101,7 +101,7 @@
       <div class="pricing-card">
         <div class="tier">Deep Clean</div>
         <h3>Luxury Detail</h3>
-        <div class="price">$280<span style="font-size:1rem;color:var(--dark-gray);">+</span></div>
+        <div class="price">$280<span style="font-size:1.3rem;color:var(--dark-gray);">+</span></div>
         <div class="price-note">Starting price &middot; varies by size</div>
         <ul class="pricing-features">
           <li>Everything in Premium, plus:</li>
@@ -115,7 +115,7 @@
         <a href="contact.html" class="btn btn-outline" style="display:block;text-align:center;">Book Luxury Detail</a>
       </div>
     </div>
-    <p style="text-align:center;font-size:0.82rem;color:var(--dark-gray);">Need something custom? <a href="contact.html" style="color:var(--green);text-decoration:underline;">Request a quote</a> for commercial spaces, estates, or ongoing contracts.</p>
+    <p style="text-align:center;font-size:1.15rem;color:var(--dark-gray);">Need something custom? <a href="contact.html" style="color:var(--green);text-decoration:underline;">Request a quote</a> for commercial spaces, estates, or ongoing contracts.</p>
   </div>
 </div>
 
