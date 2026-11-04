@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KKC Cares — Krystal Klear Clean</title>
-  <link rel="icon" type="image/webp" href="assets/favicon.webp">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -14,7 +16,7 @@
 .cares-hero .section-label { color: rgba(255,255,255,0.6); }
 .cares-hero h1 { font-family: var(--font-serif); font-size: clamp(2.8rem,5vw,4rem); font-weight: 300; color: var(--white); margin-bottom: 1.2rem; }
 .cares-hero h1 em { font-style: italic; }
-.cares-hero p { font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto; line-height: 1.9; }
+.cares-hero p { font-size: 1.25rem; color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 2.5rem; line-height: 1.9; }
 
 .cares-mission { padding: 7rem 0; }
 .cares-mission-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
@@ -34,34 +36,78 @@
 .cares-impact-header .section-label { color: var(--green-light); }
 .cares-impact-header .section-title { color: var(--white); }
 .cares-impact-header .section-title em { color: var(--green-light); }
-.cares-impact-header p { color: rgba(255,255,255,0.5); max-width: 480px; margin: 1rem auto 0; font-size: 1.21rem; }
-.impact-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.1); margin-bottom: 4rem; }
+.cares-impact-header p { color: rgba(255,255,255,0.6); max-width: 520px; margin: 1rem auto 0; font-size: 1.21rem; }
+.impact-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.1); }
 .impact-stat { background: var(--black); padding: 3rem 2rem; text-align: center; }
-.stat-num { font-family: var(--font-serif); font-size: 3.5rem; font-weight: 300; color: var(--white); line-height: 1; margin-bottom: 0.5rem; }
+.stat-num { font-family: var(--font-serif); font-size: 3.5rem; font-weight: 300; color: var(--white); line-height: 1; margin-bottom: 0.75rem; }
 .stat-num span { color: var(--green-light); }
-.stat-label { font-family: var(--font-sans); font-size: 0.89rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+.stat-label { font-family: var(--font-sans); font-size: 0.89rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.55); line-height: 1.6; }
 
-.cares-partners { padding: 5rem 0; }
+.cares-apply { padding: 7rem 0; }
+.cares-apply-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: start; }
+.apply-steps { list-style: none; margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.8rem; }
+.apply-steps li { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; }
+.apply-steps .n { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 400; color: var(--green); line-height: 1; }
+.apply-steps h4 { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 400; margin-bottom: 0.3rem; }
+.apply-steps p { font-size: 1.1rem; color: var(--dark-gray); line-height: 1.75; }
+.apply-form { background: var(--off-white); padding: 3.5rem; }
+.apply-form h3 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 300; margin-bottom: 0.5rem; }
+.apply-form .sub { font-size: 1.1rem; color: var(--dark-gray); margin-bottom: 2rem; }
+.form-group { margin-bottom: 1.2rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group label, .form-legend { display: block; font-family: var(--font-sans); font-size: 0.84rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--dark-gray); margin-bottom: 0.4rem; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; border: 1px solid var(--mid-gray); padding: 0.85rem 1rem; font-family: var(--font-sans); font-size: 1.1rem; background: var(--white); color: var(--black); outline: none; transition: var(--transition); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--black); }
+.form-group textarea { height: 130px; resize: vertical; }
+.choice-row { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.choice-row label, .check { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 1.1rem; color: var(--black); text-transform: none; letter-spacing: 0; cursor: pointer; }
+.choice-row input, .check input { width: auto; margin-top: 0.35rem; accent-color: var(--green); }
+fieldset { border: none; padding: 0; margin: 0 0 1.2rem; }
+.nominee-fields[hidden], .doctor-note[hidden] { display: none; }
+.doctor-note { background: var(--white); border-left: 3px solid var(--green); padding: 1.2rem 1.4rem; margin-bottom: 1.2rem; }
+.doctor-note p { font-size: 1.05rem; color: var(--black); margin-bottom: 0.8rem; line-height: 1.7; }
+.form-status { margin-top: 1rem; font-size: 1.1rem; line-height: 1.7; }
+.form-status.ok { color: var(--green); }
+.form-status.err { color: #9b2c2c; }
+.fine-print { font-size: 0.95rem; color: var(--dark-gray); margin-top: 1rem; line-height: 1.7; }
+
+.cares-partners { padding: 6rem 0; background: var(--off-white); }
 .cares-partners-header { text-align: center; margin-bottom: 3rem; }
-.partner-logos { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-.partner-logo { width: 140px; height: 60px; background: var(--light-gray); display: flex; align-items: center; justify-content: center; font-family: var(--font-sans); font-size: 0.89rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark-gray); }
+.partner-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
+.partner-card { background: var(--white); padding: 2.5rem; border-bottom: 3px solid var(--green); display: flex; flex-direction: column; }
+.partner-card h3 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 400; color: var(--black); margin-bottom: 0.6rem; }
+.partner-card p { font-size: 1.1rem; color: var(--dark-gray); line-height: 1.8; flex: 1; }
+.partner-card .link-arrow { margin-top: 1.2rem; font-family: var(--font-sans); font-size: 0.89rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); }
+a.partner-card { transition: var(--transition); }
+a.partner-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+
+.cares-families { padding: 7rem 0 0; }
+.cares-families-header { text-align: center; margin-bottom: 3.5rem; }
+.cares-families-header p { max-width: 560px; margin: 1.2rem auto 0; }
+.family-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2rem; max-width: 900px; margin: 0 auto; }
+.family-card { border: 1px solid var(--mid-gray); padding: 3rem; text-align: center; }
+.family-card .ribbon { font-size: 2rem; margin-bottom: 1rem; }
+.family-card h3 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; margin-bottom: 0.6rem; }
+.family-card p { font-size: 1.1rem; color: var(--dark-gray); line-height: 1.8; }
 
 @media (max-width: 900px) {
-  .cares-mission-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .cares-pillars-grid { grid-template-columns: 1fr; }
+  .cares-mission-inner, .cares-apply-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .cares-pillars-grid, .partner-grid, .family-grid { grid-template-columns: 1fr; }
   .impact-stats { grid-template-columns: 1fr 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .apply-form { padding: 2.5rem 1.5rem; }
 }
   </style>
 </head>
 <body>
-<div id="kkc-announcement"></div>
 <div id="kkc-header"></div>
 
 <div class="cares-hero">
   <div class="container">
     <span class="section-label">Giving Back</span>
     <h1>KKC <em>Cares</em></h1>
-    <p>Every clean we do helps fund a free clean for someone in our community who needs it most. Because everyone deserves a dignified, clean space.</p>
+    <p>When life gets hard, a clean home shouldn't be one more thing to worry about. KKC Cares gives free professional cleanings to neighbors going through cancer treatment, serious illness, and other traumatic life events.</p>
+    <a href="#apply" class="btn btn-outline-white">Apply for the Waitlist</a>
   </div>
 </div>
 
@@ -72,8 +118,8 @@
         <span class="section-label">Our Mission</span>
         <h2 class="section-title">Cleaning with<br><em>Conscience</em></h2>
         <div class="divider"></div>
-        <p class="section-subtitle">KKC Cares was born from a simple belief: a clean space can change how you feel, think, and move through the world. We wanted to make that gift available to everyone — not just those who can afford it.</p>
-        <p style="font-size:1.19rem;color:var(--dark-gray);margin-top:1rem;line-height:1.9;">Through our "Clean for a Cause" model, a portion of every booking goes directly into our community fund. We partner with local shelters, transition houses, senior care facilities, and families in need to deliver complimentary professional cleans.</p>
+        <p class="section-subtitle">KKC Cares is our own community giving program, run by our team for our neighbors. A clean space can change how you feel, rest, and recover, and we believe that should be within reach for anyone going through the hardest moments of life.</p>
+        <p style="font-size:1.19rem;color:var(--dark-gray);margin-top:1rem;line-height:1.9;">Every month, we set aside two free cleanings for people undergoing cancer treatment. We also keep a waitlist for anyone in our community facing a serious illness, a loss, or another traumatic event, and we proudly support local organizations doing important work close to home.</p>
       </div>
       <div>
         <div class="cares-mission-quote">
@@ -92,9 +138,9 @@
       <h2 class="section-title">Three <em>Pillars</em> of Giving</h2>
     </div>
     <div class="cares-pillars-grid">
-      <div class="pillar-card"><div class="pillar-icon">🏠</div><h3>Families in Transition</h3><p>We provide free cleans to families transitioning out of shelters, fleeing domestic situations, or experiencing hardship — helping them settle into a safe, clean space.</p></div>
-      <div class="pillar-card"><div class="pillar-icon">🌿</div><h3>Senior Support</h3><p>Elderly clients who are no longer able to maintain their homes receive regular KKC Cares visits. A clean environment supports their health, safety, and independence.</p></div>
-      <div class="pillar-card"><div class="pillar-icon">🤝</div><h3>Community Partners</h3><p>We work with local nonprofits, churches, food banks, and community organizations to identify those who need our services most and deliver cleanings with care.</p></div>
+      <div class="pillar-card"><div class="pillar-icon">🎗️</div><h3>Cancer Care Cleanings</h3><p>Two free cleanings every month for people undergoing cancer treatment, so they can save their energy for healing and for the people they love.</p></div>
+      <div class="pillar-card"><div class="pillar-icon">🤍</div><h3>Life's Hardest Moments</h3><p>A waitlist for anyone going through a serious illness, the loss of a loved one, or another traumatic event. Apply for yourself or nominate someone you care about.</p></div>
+      <div class="pillar-card"><div class="pillar-icon">🤝</div><h3>Community Partners</h3><p>We support local organizations that feed families, rescue animals, and stand behind our veterans and first responders.</p></div>
     </div>
   </div>
 </div>
@@ -102,15 +148,100 @@
 <div class="cares-impact">
   <div class="container">
     <div class="cares-impact-header">
-      <span class="section-label">Our Impact So Far</span>
-      <h2 class="section-title">Every Booking <em>Counts</em></h2>
-      <p>Since launching KKC Cares, we've made a measurable difference in our community.</p>
+      <span class="section-label">Our Commitment</span>
+      <h2 class="section-title">Every Month, <em>Without Fail</em></h2>
+      <p>No national middleman. KKC Cares is run by our own team, for our own community.</p>
     </div>
     <div class="impact-stats">
-      <div class="impact-stat"><div class="stat-num">320<span>+</span></div><div class="stat-label">Free Cleans Delivered</div></div>
-      <div class="impact-stat"><div class="stat-num">14<span>+</span></div><div class="stat-label">Community Partners</div></div>
-      <div class="impact-stat"><div class="stat-num">48<span>+</span></div><div class="stat-label">Seniors Supported</div></div>
-      <div class="impact-stat"><div class="stat-num">$42<span>K</span></div><div class="stat-label">In Value Donated</div></div>
+      <div class="impact-stat"><div class="stat-num">2</div><div class="stat-label">Free cleanings<br>every month</div></div>
+      <div class="impact-stat"><div class="stat-num">4</div><div class="stat-label">Local organizations<br>we support</div></div>
+      <div class="impact-stat"><div class="stat-num"><span>$</span>0</div><div class="stat-label">Cost to the people<br>we serve</div></div>
+      <div class="impact-stat"><div class="stat-num">100<span>%</span></div><div class="stat-label">Local and run<br>by our team</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cares-families">
+  <div class="container">
+    <div class="cares-families-header">
+      <span class="section-label">Families We've Served</span>
+      <h2 class="section-title">Honored to <em>Help</em></h2>
+      <p class="section-subtitle">We're grateful to the families who have let us into their homes during some of the hardest days of their lives.</p>
+    </div>
+    <div class="family-grid">
+      <div class="family-card"><div class="ribbon">🎗️</div><h3>The Higgins Family</h3><p>KKC Cares provided free professional cleanings to the Higgins family while Tim was going through cancer treatment.</p></div>
+      <div class="family-card"><div class="ribbon">🎗️</div><h3>The Devito Family</h3><p>KKC Cares provided free professional cleanings to the Devito family while Emily was going through cancer treatment.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="cares-apply" id="apply">
+  <div class="container">
+    <div class="cares-apply-inner">
+      <div>
+        <span class="section-label">The KKC Cares Waitlist</span>
+        <h2 class="section-title">Going Through<br><em>Something Hard?</em></h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">If you or someone you love is facing cancer treatment, a serious illness, a loss, or another traumatic event, we'd be honored to help. Join our waitlist and we'll reach out as cleaning spots open up.</p>
+        <ol class="apply-steps">
+          <li><span class="n">1</span><div><h4>Apply online</h4><p>Fill out the short form for yourself, or nominate someone you know.</p></div></li>
+          <li><span class="n">2</span><div><h4>Share a doctor's note</h4><p>If the application is for an illness, we ask for a doctor's note confirming the diagnosis or treatment.</p></div></li>
+          <li><span class="n">3</span><div><h4>We review and reach out</h4><p>Our team reviews every application personally and keeps all information confidential.</p></div></li>
+          <li><span class="n">4</span><div><h4>Your free clean is scheduled</h4><p>As spots open, we'll contact you to book a time that works for you.</p></div></li>
+        </ol>
+      </div>
+
+      <form class="apply-form" id="waitlist-form" novalidate>
+        <h3>Waitlist Application</h3>
+        <p class="sub">All information is kept private and used only to arrange your cleaning.</p>
+
+        <fieldset>
+          <span class="form-legend">Who is this application for?</span>
+          <div class="choice-row">
+            <label><input type="radio" name="applying_for" value="Myself" checked> Myself</label>
+            <label><input type="radio" name="applying_for" value="Someone else"> Someone else</label>
+          </div>
+        </fieldset>
+
+        <div class="form-row">
+          <div class="form-group"><label for="f-name">Your Full Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="form-group"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        </div>
+        <div class="form-group"><label for="f-email">Email Address</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+
+        <div class="nominee-fields" hidden>
+          <div class="form-row">
+            <div class="form-group"><label for="f-nominee">Their Full Name</label><input id="f-nominee" name="nominee_name" type="text"></div>
+            <div class="form-group"><label for="f-relationship">Your Relationship</label><input id="f-relationship" name="relationship" type="text" placeholder="Friend, family, neighbor..."></div>
+          </div>
+          <div class="form-group"><label class="check"><input type="checkbox" name="nominee_aware" value="Yes"> They know I'm nominating them and are open to a free cleaning</label></div>
+        </div>
+
+        <div class="form-group"><label for="f-town">Town / City of the Home</label><input id="f-town" name="town" type="text" autocomplete="address-level2" required></div>
+
+        <div class="form-group">
+          <label for="f-reason">What's Going On?</label>
+          <select id="f-reason" name="reason" required>
+            <option value="">Select one</option>
+            <option>Cancer treatment</option>
+            <option>Other serious illness</option>
+            <option>Loss of a loved one</option>
+            <option>Accident or injury</option>
+            <option>Other traumatic event</option>
+          </select>
+        </div>
+
+        <div class="doctor-note" hidden>
+          <p><strong>A doctor's note is required</strong> for illness-related applications. Once we review your application, we'll let you know how to send it to us privately.</p>
+          <label class="check"><input type="checkbox" name="doctor_note_ack" value="Yes"> I understand a doctor's note is required</label>
+        </div>
+
+        <div class="form-group"><label for="f-story">Tell Us a Little More</label><textarea id="f-story" name="message" placeholder="Share as much or as little as you're comfortable with, plus anything we should know about the home."></textarea></div>
+
+        <button type="submit" class="btn btn-dark" style="width:100%;text-align:center;">Join the Waitlist</button>
+        <div class="form-status" role="status" aria-live="polite"></div>
+        <p class="fine-print">Submitting this form adds you to our waitlist. It doesn't guarantee a cleaning date, and we'll be in touch as spots become available.</p>
+      </form>
     </div>
   </div>
 </div>
@@ -118,29 +249,96 @@
 <div class="cares-partners">
   <div class="container">
     <div class="cares-partners-header">
-      <span class="section-label">Our Community Partners</span>
+      <span class="section-label">Organizations We Support</span>
       <h2 class="section-title">Together, <em>Stronger</em></h2>
     </div>
-    <div class="partner-logos">
-      <div class="partner-logo">Local Shelter</div>
-      <div class="partner-logo">Hope House</div>
-      <div class="partner-logo">Senior Care Org</div>
-      <div class="partner-logo">Food Bank</div>
-      <div class="partner-logo">Family Services</div>
-      <div class="partner-logo">Community Hub</div>
+    <div class="partner-grid">
+      <div class="partner-card">
+        <h3>Night of Nights</h3>
+        <!-- TODO: replace with a real description and link for Night of Nights -->
+        <p>A community event our team is proud to support, bringing neighbors together for a good cause.</p>
+      </div>
+      <div class="partner-card">
+        <h3>Guilderland Food Pantry</h3>
+        <p>Located at Christ Church Guilderland, the pantry helps local families and neighbors put food on the table, with curbside pickup and delivery for those who need it.</p>
+      </div>
+      <a class="partner-card" href="https://outofthepits.org/" target="_blank" rel="noopener">
+        <h3>Out of the Pits</h3>
+        <p>A volunteer-run pit bull rescue in the Albany area since 1994. They rescue and rehome dogs, run a low-cost spay and neuter program, and bring therapy dogs into local schools.</p>
+        <span class="link-arrow">Visit Website →</span>
+      </a>
+      <a class="partner-card" href="https://operationatease.org/" target="_blank" rel="noopener">
+        <h3>Operation At Ease</h3>
+        <p>Pairs shelter dogs with veterans and first responders living with post-traumatic stress, providing free training so each team can heal together.</p>
+        <span class="link-arrow">Visit Website →</span>
+      </a>
     </div>
   </div>
 </div>
 
 <div class="cta-banner" style="background:var(--black);">
   <div class="container">
-    <h2>Want to <em style="font-style:italic;">Nominate</em> Someone?</h2>
-    <p>Do you know a senior, family, or individual who could use a KKC Cares clean? Let us know.</p>
-    <a href="contact.html" class="btn btn-outline-white">Submit a Nomination</a>
+    <h2>Know Someone Who <em style="font-style:italic;">Needs a Hand?</em></h2>
+    <p>Nominate a friend, neighbor, or family member for the KKC Cares waitlist.</p>
+    <a href="#apply" class="btn btn-outline-white">Submit a Nomination</a>
   </div>
 </div>
 
 <div id="kkc-footer"></div>
 <script src="assets/kkc-shared.js"></script>
+<script>
+// Paste the form service endpoint here (e.g. https://formspree.io/f/xxxxxxx) to start receiving applications.
+const WAITLIST_ENDPOINT = '';
+
+(function () {
+  const form = document.getElementById('waitlist-form');
+  const nominee = form.querySelector('.nominee-fields');
+  const note = form.querySelector('.doctor-note');
+  const reason = form.querySelector('#f-reason');
+  const status = form.querySelector('.form-status');
+  const illness = ['Cancer treatment', 'Other serious illness'];
+
+  function sync() {
+    const forOther = form.querySelector('input[name="applying_for"]:checked').value === 'Someone else';
+    nominee.hidden = !forOther;
+    form.querySelector('#f-nominee').required = forOther;
+    const needsNote = illness.includes(reason.value);
+    note.hidden = !needsNote;
+    note.querySelector('input').required = needsNote;
+  }
+  form.addEventListener('change', sync);
+  sync();
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.className = 'form-status';
+    if (!form.checkValidity()) {
+      status.classList.add('err');
+      status.textContent = 'Please fill in the required fields above.';
+      form.reportValidity();
+      return;
+    }
+    if (!WAITLIST_ENDPOINT) {
+      status.classList.add('err');
+      status.textContent = 'Online applications are almost ready. In the meantime, please call or email us to join the waitlist.';
+      return;
+    }
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    try {
+      const res = await fetch(WAITLIST_ENDPOINT, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      if (!res.ok) throw new Error();
+      form.reset(); sync();
+      status.classList.add('ok');
+      status.textContent = "Thank you. You're on the list, and our team will be in touch soon.";
+    } catch {
+      status.classList.add('err');
+      status.textContent = 'Something went wrong sending your application. Please try again, or call or email us.';
+    } finally {
+      btn.disabled = false;
+    }
+  });
+})();
+</script>
 </body>
 </html>

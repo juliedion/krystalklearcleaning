@@ -1,25 +1,6 @@
-// Inject announcement bar, header, and footer into every page
+// Inject header and footer into every page
 const currentPage = location.pathname.split('/').pop() || 'index.html';
 
-const announcementBar = `
-<div class="announcement-bar">
-  <div class="announcement-track">
-    <div class="announcement-item"><span class="dot"></span> Professional Residential &amp; Commercial Cleaning</div>
-    <div class="announcement-item"><span class="dot"></span> Fully Insured &amp; Bonded</div>
-    <div class="announcement-item"><span class="dot"></span> Eco-Friendly Products Available</div>
-    <div class="announcement-item"><span class="dot"></span> 5-Star Rated Service</div>
-    <div class="announcement-item"><span class="dot"></span> Serving the Region Since 2018</div>
-    <div class="announcement-item"><span class="dot"></span> 100% Satisfaction Guarantee</div>
-    <div class="announcement-item"><span class="dot"></span> Book Online Today — Same-Week Availability</div>
-    <div class="announcement-item"><span class="dot"></span> Professional Residential &amp; Commercial Cleaning</div>
-    <div class="announcement-item"><span class="dot"></span> Fully Insured &amp; Bonded</div>
-    <div class="announcement-item"><span class="dot"></span> Eco-Friendly Products Available</div>
-    <div class="announcement-item"><span class="dot"></span> 5-Star Rated Service</div>
-    <div class="announcement-item"><span class="dot"></span> Serving the Region Since 2018</div>
-    <div class="announcement-item"><span class="dot"></span> 100% Satisfaction Guarantee</div>
-    <div class="announcement-item"><span class="dot"></span> Book Online Today — Same-Week Availability</div>
-  </div>
-</div>`;
 
 const navLinks = [
   { href: 'about.html',     label: 'About' },
@@ -80,6 +61,5 @@ const siteFooter = `
   </div>
 </footer>`;
 
-document.getElementById('kkc-announcement').outerHTML = announcementBar;
 document.getElementById('kkc-header').outerHTML = siteHeader;
 document.getElementById('kkc-footer').outerHTML = siteFooter;

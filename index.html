@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Krystal Klear Clean — Professional Cleaning Services</title>
   <meta name="description" content="Trusted residential and commercial cleaning services. Fully insured, eco-friendly products available, 100% satisfaction guaranteed.">
-  <link rel="icon" type="image/webp" href="assets/favicon.webp">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/kkc.css">
   <style>
 /* ─── HERO ─── */
-.hero { height: calc(100vh - 146px); min-height: 620px; background: var(--black); position: relative; overflow: hidden; display: flex; align-items: center; }
+.hero { height: calc(100vh - 130px); min-height: 620px; background: var(--black); position: relative; overflow: hidden; display: flex; align-items: center; }
 .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #1a0810 100%); }
 .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.65; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.05) 100%); }
@@ -28,10 +30,6 @@
 .hero-scroll::after { content: ''; display: block; width: 40px; height: 1px; background: rgba(255,255,255,0.3); }
 
 /* ─── TRUST BAR ─── */
-.trust-bar { background: var(--off-white); border-bottom: 1px solid var(--mid-gray); padding: 1.4rem 0; }
-.trust-bar-inner { display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
-.trust-item { display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-sans); font-size: 0.92rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark-gray); }
-.trust-item svg { width: 16px; height: 16px; fill: var(--green); flex-shrink: 0; }
 
 /* ─── ABOUT STRIP ─── */
 .about-strip { padding: 7rem 0; }
@@ -81,26 +79,6 @@
 </head>
 <body>
 
-<!-- ANNOUNCEMENT BAR -->
-<div class="announcement-bar">
-  <div class="announcement-track">
-    <div class="announcement-item"><span class="dot"></span> Professional Residential &amp; Commercial Cleaning</div>
-    <div class="announcement-item"><span class="dot"></span> Fully Insured &amp; Bonded</div>
-    <div class="announcement-item"><span class="dot"></span> Eco-Friendly Products Available</div>
-    <div class="announcement-item"><span class="dot"></span> 5-Star Rated Service</div>
-    <div class="announcement-item"><span class="dot"></span> Serving the Region Since 2018</div>
-    <div class="announcement-item"><span class="dot"></span> 100% Satisfaction Guarantee</div>
-    <div class="announcement-item"><span class="dot"></span> Book Online Today — Same-Week Availability</div>
-    <div class="announcement-item"><span class="dot"></span> Professional Residential &amp; Commercial Cleaning</div>
-    <div class="announcement-item"><span class="dot"></span> Fully Insured &amp; Bonded</div>
-    <div class="announcement-item"><span class="dot"></span> Eco-Friendly Products Available</div>
-    <div class="announcement-item"><span class="dot"></span> 5-Star Rated Service</div>
-    <div class="announcement-item"><span class="dot"></span> Serving the Region Since 2018</div>
-    <div class="announcement-item"><span class="dot"></span> 100% Satisfaction Guarantee</div>
-    <div class="announcement-item"><span class="dot"></span> Book Online Today — Same-Week Availability</div>
-  </div>
-</div>
-
 <!-- HEADER -->
 <header class="site-header">
   <div class="logo"><a href="index.html"><img src="assets/kkc-logo-shiny.webp?v=2" alt="Krystal Klear Clean"></a></div>
@@ -133,17 +111,6 @@
     </div>
   </div>
   <div class="hero-scroll">Scroll to explore</div>
-</div>
-
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-bar-inner container">
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>5-Star Rated Service</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="#2c4a3e" stroke-width="2" fill="none"/></svg>Fully Insured &amp; Bonded</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/></svg>Serving the Region Since 2018</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H15V15H9V21H4C3.45 21 3 20.55 3 20V9Z"/></svg>Eco-Friendly Products</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M20 6H4C2.9 6 2 6.9 2 8V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6ZM20 18H4V8H20V18ZM11 11H9V9H11V11ZM11 15H9V13H11V15ZM15 11H13V9H15V11ZM15 15H13V13H15V15Z"/></svg>Residential &amp; Commercial</div>
-  </div>
 </div>
 
 <!-- ABOUT STRIP -->
@@ -211,7 +178,7 @@
       <a href="kkc-cares.html" class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22C12 22 3 17 3 10C3 7.24 5.24 5 8 5C9.64 5 11.09 5.79 12 7C12.91 5.79 14.36 5 16 5C18.76 5 21 7.24 21 10C21 17 12 22 12 22Z"/></svg></div>
         <h3>KKC Cares Program</h3>
-        <p>Complimentary cleans for those facing hardship in our community.</p>
+        <p>Free cleanings for neighbors facing cancer, serious illness, or a traumatic event.</p>
         <div class="link-arrow">Learn More →</div>
       </a>
     </div>
