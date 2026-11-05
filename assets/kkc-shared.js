@@ -49,8 +49,8 @@ const siteFooter = `
       <div class="footer-col"><h5>Contact</h5><ul>
         <li><a href="contact.html">Book a Clean</a></li>
         <li><a href="contact.html">Get a Quote</a></li>
-        <li><a href="mailto:hello@krystalklearclean.ca">hello@krystalklearclean.ca</a></li>
-        <li><a href="tel:5550000000">(555) 000-0000</a></li>
+        <li><a href="mailto:krystalklearclean518@gmail.com">krystalklearclean518@gmail.com</a></li>
+        <li><a href="tel:+15188369325">(518) 836-9325</a></li>
       </ul></div>
     </div>
     <div class="footer-bottom">
