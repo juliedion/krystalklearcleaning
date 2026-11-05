@@ -32,11 +32,11 @@ ul { list-style: none; }
 .site-header .logo { display: flex; align-items: center; }
 .site-header .logo img { height: 90px; width: auto; display: block; }
 .site-nav { display: flex; gap: 2rem; align-items: center; }
-.site-nav a { font-family: var(--font-sans); font-size: 0.98rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--white); transition: var(--transition); }
+.site-nav a { font-family: var(--font-sans); font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--white); transition: var(--transition); }
 .site-nav a:hover, .site-nav a.active { color: var(--green-light); }
 .site-nav .btn-nav {
   background: var(--green); color: var(--white); padding: 0.65rem 1.6rem;
-  font-size: 0.89rem; letter-spacing: 0.18em; text-transform: uppercase;
+  font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
   transition: var(--transition);
 }
 .site-nav .btn-nav:hover { background: var(--green-light); color: var(--black); }
